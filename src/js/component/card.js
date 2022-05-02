@@ -16,9 +16,15 @@ export const Card = (props) => {
                 <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" />
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
-                <p className="card-text">{props.descriptionOne}</p>
-                <p className="card-text">{props.descriptionTwo}</p>
-                <p className="card-text">{props.descriptionThree}</p>
+                <p className="card-text">Gender: {props.descriptionOne}</p>
+                <p className="card-text">Hair Color: {props.descriptionTwo}</p>
+                <p className="card-text">Eye Color: {props.descriptionThree}</p>
+
+                <p className="card-text">Population: {props.descriptionFour}</p>
+                <p className="card-text">Terrain: {props.descriptionFive}</p>
+
+                <p className="card-text">Rotation Period: {props.descriptionSix}</p>
+                <p className="card-text">Orbital Period: {props.descriptionSeven}</p>
 
 
                 <a href="#" className="btn btn-primary">learn more</a>
@@ -45,4 +51,9 @@ Card.propTypes = {
     descriptionOne: PropTypes.string,
     descriptionTwo: PropTypes.string,
     descriptionThree: PropTypes.string,
+    descriptionFour: PropTypes.string,
+    descriptionFive: PropTypes.string,
+
+    
+
 }

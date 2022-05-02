@@ -28,8 +28,8 @@ export const Home = () => {
 									key={index}
 									name={character.name}
 									descriptionOne={character.gender}
-									descriptionTwo={"Eye Color: "}
-									descriptionThree={"Hair Color: "}
+									descriptionTwo={character.hair_color}
+									descriptionThree={character.eye_color}
 									id={index}
 									section="character"
 								/>
@@ -47,10 +47,8 @@ export const Home = () => {
 									<Card
 										key={index}
 										name={planets.name}
-										labelText1={"Population: "}
-										labelText2={"Terrain: "}
-										text1={planets.population}
-										text2={planets.terrain}
+										descriptionFour={planets.population}
+										descriptionFive={planets.terrain}
 										id={index}
 										section="planets"
 									/>
@@ -69,10 +67,8 @@ export const Home = () => {
 									<Card
 										key={index}
 										name={vehicles.name}
-										labelText1={"Population: "}
-										labelText2={"Terrain: "}
-										text1={vehicles.population}
-										text2={vehicles.terrain}
+										descriptionSix={vehicles.rotation_period}
+										descriptionSeven={vehicles.orbital_period}
 										id={index}
 										section="vehicles"
 									/>
