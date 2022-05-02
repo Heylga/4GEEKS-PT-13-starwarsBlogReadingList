@@ -7,10 +7,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Characters } from "./component/charactersList.js";
-import { Planets } from "./component/planetsList.js";
 import { Body } from "./views/body.js";
-import { Vehicles } from "./component/vehiclesList.js"
 
 
 //create your first component

@@ -11,8 +11,9 @@ export const Card = (props) => {
 
     
     return (
-        <div className="card">
-        <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" />
+        <div className="container-card">
+            <div className="card">
+                <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" />
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">{props.descriptionOne}</p>
@@ -30,8 +31,10 @@ export const Card = (props) => {
                     }}
                 >
                 <a href="#" className="btn btn-primary">❤️</a>
-                </button>    
-            </div>
+                </button>   
+                </div> 
+
+   </div>
    </div>
 
     );
