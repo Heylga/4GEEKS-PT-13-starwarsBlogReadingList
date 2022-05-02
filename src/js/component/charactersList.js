@@ -8,9 +8,7 @@ import {Card} from "../component/card.js"
 export const CharactersList = () => {
     const {store, actions} = useContext(Context);
 
-    useEffect (() => {
-		actions.getOneCharacters()
-	}, [])
+
 
     const list = [
         {

@@ -1,49 +1,32 @@
+import { string } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			characters: [],
-			oneCharacters: [],
+			people: [],
 			planets: [],
-			onePlanets: [],
-			vehicles: [],
-			oneVehicles: [],
-			updateFavourites: [],
+			favorite: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			getCharacters: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/people/");
-				const dataCharacters = await response.json();
-				setStore ({ characters: dataCharacters.results }); 
+			loadingData: str => {
+				fetch("https://swapi.dev/api/" + str + "/")
+					.then(res => res.json())
+					.then(data => setStore({ [str]: data.results }))
+					.catch(error => console.log(error));
 			},
-			getOneCharacters: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/people/");
-				const dataOneCharacters = await response.json();
-				setStore ({ oneCharacters: dataOneCharacters.results.properties }); 
-			},
-
-			getPlanets: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/planets/");
-				const dataPlanets = await response.json();
-				setStore ({ planets: dataPlanets.results });
+			addFavorite: item => {
+				const store = getStore();
+				const validate = store.favorite.includes(item);
+				if (store.favorite == [] || !validate) {
+					setStore({ favorite: [...store.favorite, item] });
+				}
 			},
 
-			getOnePlanets: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/planets/");
-				const dataOneCharacters = await response.json();
-				setStore ({ oneCharacters: dataOnePlanets.results.properties }); 
-			},
-
-			getVehicles: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/vehicles/");
-				const dataVehicles = await response.json();
-				setStore ({ planets: dataVehicles.results });
-			},
-
-			getOneVehicles: async () => {
-				const response = await fetch ("https://www.swapi.tech/api/vehicles/");
-				const dataOneVehicles = await response.json();
-				setStore ({ oneCharacters: dataOneVehicles.results.properties }); 
+			deleteFavorite: id => {
+				const store = getStore();
+				const updatedList = [...store.favorite];
+				updatedList.splice(id, 1);
+				setStore({ favorite: [...updatedList] });
 			}
 		}
 	};
