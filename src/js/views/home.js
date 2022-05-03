@@ -49,13 +49,13 @@ export const Home = () => {
 				<div className="Planets">
 					<h2>Planets</h2>
 					<div className="container-cards">
-						{store.planets.map((planets, index) => {
+						{store.planets.map((character, index) => {
 							return (
 								<Planets
 									key={index}
-									name={planets.name}
-									descriptionTwo={planets.rotation_period}
-									descriptionThree={planets.orbital_period}
+									name={character.name}
+									descriptionTwo={character.population}
+									descriptionThree={character.terrain}
 									id={index}
 									section="planets"
 								/>

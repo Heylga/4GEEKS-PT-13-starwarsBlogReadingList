@@ -20,14 +20,20 @@ export const Planets = (props) => {
                 {/* <p className="card-text">Hair Color: {props.descriptionTwo}</p>
                 <p className="card-text">Eye Color: {props.descriptionThree}</p> */}
 
-                <p className="card-text">Rotation Period: {props.descriptionFour}</p>
-                <p className="card-text">Orbital Period: {props.descriptionFive}</p>
+                <p className="card-text">Population: {props.descriptionFour}</p>
+                <p className="card-text">Terrain: {props.descriptionFive}</p>
 {/* 
                 <p className="card-text">Model: {props.descriptionSix}</p>
                 <p className="card-text">Manufacturer: {props.descriptionSeven}</p> */}
 
 
-                <a href="#" className="btn btn-primary">learn more</a>
+                <div className="d-flex justify-content-between">
+                    <Link to="/singleplanet">
+						<button href="#" className="btn btn-outline-primary">
+							Learn More!
+						</button>
+					</Link>
+
 
                 <button
                     id="heart"
@@ -39,6 +45,7 @@ export const Planets = (props) => {
                 <a href="#" className="btn btn-primary">❤️</a>
                 </button>   
                 </div> 
+                </div>
 
    </div>
    </div>

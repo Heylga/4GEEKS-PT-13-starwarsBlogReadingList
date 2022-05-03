@@ -11,6 +11,7 @@ export const People = (props) => {
 
     
     return (
+
         <div className="container-card">
             <div className="card">
                 <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" />
@@ -27,7 +28,13 @@ export const People = (props) => {
                 <p className="card-text">Manufacturer: {props.descriptionSeven}</p> */}
 
 
-                <a href="#" className="btn btn-primary">learn more</a>
+                <div className="d-flex justify-content-between">
+                    <Link to="/singlecharacter">
+						<button href="#" className="btn btn-outline-primary">
+							Learn More!
+						</button>
+					</Link>
+
 
                 <button
                     id="heart"
@@ -39,7 +46,7 @@ export const People = (props) => {
                 <a href="#" className="btn btn-primary">❤️</a>
                 </button>   
                 </div> 
-
+                </div>
    </div>
    </div>
 
@@ -48,12 +55,10 @@ export const People = (props) => {
 
 People.propTypes = {
     name: PropTypes.string,
+    character: PropTypes.string,
     descriptionOne: PropTypes.string,
     descriptionTwo: PropTypes.string,
     descriptionThree: PropTypes.string,
     descriptionFour: PropTypes.string,
     descriptionFive: PropTypes.string,
-
-    
-
 }
