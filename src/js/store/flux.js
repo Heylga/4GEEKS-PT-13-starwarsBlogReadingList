@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			loadingData: str => {
-				fetch("https://swapi.dev/api/" + str + "/")
+				fetch("https://www.swapi.tech/api/" + str + "/")
 					.then(res => res.json())
 					.then(data => setStore({ [str]: data.results }))
 					.catch(error => console.log(error));

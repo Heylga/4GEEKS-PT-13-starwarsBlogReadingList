@@ -61,7 +61,7 @@ export const Home = () => {
 
 
 					<div className="starships">
-						<h2>starships</h2>
+						<h2>Starships</h2>
 						<div className="container-cards">
 							{store.starships.map((starships, index) => {
 								return (
