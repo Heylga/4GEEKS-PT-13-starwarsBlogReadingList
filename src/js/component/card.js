@@ -23,8 +23,8 @@ export const Card = (props) => {
                 <p className="card-text">Population: {props.descriptionFour}</p>
                 <p className="card-text">Terrain: {props.descriptionFive}</p>
 
-                <p className="card-text">Rotation Period: {props.descriptionSix}</p>
-                <p className="card-text">Orbital Period: {props.descriptionSeven}</p>
+                <p className="card-text">Model: {props.descriptionSix}</p>
+                <p className="card-text">Manufacturer: {props.descriptionSeven}</p>
 
 
                 <a href="#" className="btn btn-primary">learn more</a>

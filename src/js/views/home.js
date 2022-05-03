@@ -12,11 +12,11 @@ export const Home = () => {
 	useEffect(() => {
 		actions.loadingData("planets");
 		actions.loadingData("people");
-		actions.loadingData("vehicles");
+		actions.loadingData("starships");
 	}, []);
 	console.log("People", store.people);
 	console.log("Planets", store.planets);
-	console.log("Vehicles", store.planets);
+	console.log("starships", store.planets);
 	return (
 		<div>
 			<div className="container-fluid">
@@ -60,18 +60,18 @@ export const Home = () => {
 
 
 
-					<div className="vehicles">
-						<h2>Vehicles</h2>
+					<div className="starships">
+						<h2>starships</h2>
 						<div className="container-cards">
-							{store.vehicles.map((vehicles, index) => {
+							{store.starships.map((starships, index) => {
 								return (
 									<Card
 										key={index}
-										name={vehicles.name}
-										descriptionSix={vehicles.rotation_period}
-										descriptionSeven={vehicles.orbital_period}
+										name={starships.name}
+										descriptionSix={starships.model}
+										descriptionSeven={starships.manufacturer}
 										id={index}
-										section="vehicles"
+										section="starships"
 									/>
 								);
 							})}
