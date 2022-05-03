@@ -22,6 +22,7 @@ export const Home = () => {
 			<div className="container-fluid">
 				<div className="characters">
 					<h2>Characters</h2>
+					<div className="container-cards">
 						{store.people.map((character, index) => {
 							return (
 								<Card
@@ -35,13 +36,13 @@ export const Home = () => {
 								/>
 							);
 						})}
+						</div>
 				</div>
 
 
-				<div className="container-fluid">
 					<div className="planets">
 						<h2>Planets</h2>
-						<div className="card-body">
+						<div className="container-cards">
 							{store.planets.map((planets, index) => {
 								return (
 									<Card
@@ -54,14 +55,14 @@ export const Home = () => {
 									/>
 								);
 							})}
-						</div>
-					</div>
-				</div>
 
-				<div className="container-fluid">
+					</div>
+
+
+
 					<div className="vehicles">
-						<h2>vehicles</h2>
-						<div className="card-body">
+						<h2>Vehicles</h2>
+						<div className="container-cards">
 							{store.vehicles.map((vehicles, index) => {
 								return (
 									<Card
@@ -74,7 +75,8 @@ export const Home = () => {
 									/>
 								);
 							})}
-						</div>
+
+					</div>
 					</div>
 				</div>
 

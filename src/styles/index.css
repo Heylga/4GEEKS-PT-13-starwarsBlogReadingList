@@ -1,3 +1,16 @@
-/* 
-    General Styles
-*/
+.card{
+    width: 300px;
+    flex: 0 0 auto;
+   
+}
+
+
+.line{
+   
+    border-color: rgb(170, 36, 36);;
+}
+.singleImg{
+    width: 600px;
+    height: 500px;
+    margin-right: 20px;
+}

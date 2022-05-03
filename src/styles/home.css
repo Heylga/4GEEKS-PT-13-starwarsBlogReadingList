@@ -1,0 +1,11 @@
+
+h2 {
+    color: rgb(170, 36, 36);
+}
+.container-cards{
+    overflow-x: scroll;
+    display: flex;
+}
+.container-card {
+    display: inline-block;
+}
