@@ -10,11 +10,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			loadingData: str => {
-				fetch("https://www.swapi.tech/api/" + str + "/")
-					.then(res => res.json())
-					.then(data => setStore({ [str]: data.results }))
-					.catch(error => console.log(error));
+				fetch("https://swapi.dev/api/people/")
+					.then(response => response.json())
+					.then(data => setStore({ people: data.results }))
+					.catch(error => console.error(error));
+
+				fetch("https://swapi.dev/api/planets/")
+					.then(response => response.json())
+					.then(data => setStore({ planets: data.results }))
+					.catch(error => console.error(error));
+
+					fetch("https://swapi.dev/api/starships/")
+					.then(response => response.json())
+					.then(data => setStore({ starships: data.results }))
+					.catch(error => console.error(error));
 			},
+			
 			addFavorite: item => {
 				const store = getStore();
 				const validate = store.favorite.includes(item);
