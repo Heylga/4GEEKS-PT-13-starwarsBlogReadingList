@@ -29,7 +29,7 @@ export const People = (props) => {
 
 
                 <div className="d-flex justify-content-between">
-                    <Link to="/singlecharacter">
+                    <Link to="/demo">
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>

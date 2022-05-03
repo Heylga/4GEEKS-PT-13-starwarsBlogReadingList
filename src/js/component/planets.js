@@ -28,7 +28,7 @@ export const Planets = (props) => {
 
 
                 <div className="d-flex justify-content-between">
-                    <Link to="/singleplanet">
+                    <Link to="/demo2">
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>

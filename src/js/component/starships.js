@@ -28,7 +28,12 @@ export const Starships = (props) => {
                 <p className="card-text">Manufacturer: {props.descriptionSeven}</p>
 
 
-                <a href="#" className="btn btn-primary">learn more</a>
+                <div className="d-flex justify-content-between">
+                    <Link to="/demo3">
+						<button href="#" className="btn btn-outline-primary">
+							Learn More!
+						</button>
+					</Link>
 
                 <button
                     id="heart"
@@ -40,6 +45,8 @@ export const Starships = (props) => {
                 <a href="#" className="btn btn-primary">❤️</a>
                 </button>   
                 </div> 
+
+                </div>
 
    </div>
    </div>
