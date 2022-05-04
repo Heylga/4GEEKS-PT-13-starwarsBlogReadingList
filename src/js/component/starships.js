@@ -13,23 +13,24 @@ export const Starships = (props) => {
     return (
         <div className="container-card">
             <div className="card">
-                <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" />
+
+            <img
+                        src={
+                          "https://starwars-visualguide.com/#/starships?page=1" + ".jpg"
+                        }
+                        className="card-img-top"
+                        alt="Star Wars Starships"
+                      />
+                {/* <img src="https://cloudfour.com/wp-content/uploads/2020/01/default.svg" className="card-img-top" alt="Card" /> */}
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 
-                {/* <p className="card-text">Gender: {props.descriptionOne}</p>
-                <p className="card-text">Hair Color: {props.descriptionTwo}</p>
-                <p className="card-text">Eye Color: {props.descriptionThree}</p>
-
-                <p className="card-text">Population: {props.descriptionFour}</p>
-                <p className="card-text">Terrain: {props.descriptionFive}</p> */}
-
                 <p className="card-text">Model: {props.descriptionSix}</p>
                 <p className="card-text">Manufacturer: {props.descriptionSeven}</p>
 
 
                 <div className="d-flex justify-content-between">
-                    <Link to="/demo3">
+                    <Link to="/sinstar">
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>
@@ -57,11 +58,6 @@ export const Starships = (props) => {
 Starships.propTypes = {
     name: PropTypes.string,
     descriptionOne: PropTypes.string,
-    descriptionTwo: PropTypes.string,
-    descriptionThree: PropTypes.string,
-    descriptionFour: PropTypes.string,
-    descriptionFive: PropTypes.string,
-
-    
-
+    descriptionSix: PropTypes.string,
+    descriptionSeven: PropTypes.string,
 }
