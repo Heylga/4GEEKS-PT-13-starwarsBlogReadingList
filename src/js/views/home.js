@@ -36,7 +36,7 @@ export const Home = () => {
 									descriptionOne={character.gender}
 									descriptionTwo={character.hair_color}
 									descriptionThree={character.eye_color}
-									id={index}
+									id={character.id}
 									section="character"
 								/>
 							);

@@ -28,7 +28,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/sinchar">
+						<Route exact path="/sinchar/:name">
 							<Sinchar />
 						</Route>
 						<Route exact path="/sinplan">

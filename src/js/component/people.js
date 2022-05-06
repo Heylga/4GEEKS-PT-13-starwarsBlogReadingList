@@ -1,13 +1,14 @@
 import React from "react";
 import { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/card.css";
 
 export const People = (props) => {
     const {store, actions} = useContext(Context);
     const [favourite, setFavourite]= useState ({});
+    const {name}=useParams()
 
     
     return (
@@ -16,7 +17,7 @@ export const People = (props) => {
             <div className="card">
             <img
                         src={
-                          "https://starwars-visualguide.com/#/characters?page=1" + ".jpg"
+                          "https://starwars-visualguide.com/assets/img/characters/" + props.id + ".jpg"
                         }
                         className="card-img-top"
                         alt="Star Wars Character"
@@ -32,7 +33,7 @@ export const People = (props) => {
 
 
                 <div className="d-flex justify-content-between">
-                    <Link to="/sinchar">
+                    <Link to={"/sinchar/" + props.name}>
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>
@@ -62,4 +63,5 @@ People.propTypes = {
     descriptionOne: PropTypes.string,
     descriptionTwo: PropTypes.string,
     descriptionThree: PropTypes.string,
+    id: PropTypes.number,
 }

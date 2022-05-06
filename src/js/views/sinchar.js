@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 
 
 export const Sinchar = () => { 
@@ -38,7 +40,7 @@ export const Sinchar = () => {
 					<h3>Birth Year</h3> <br /> <h6>props birth year</h6>
 				</div>
 				<div className="info">
-					<h3>Eye Color</h3> <br /> <h6>props eye color</h6>
+					<h3>Eye Color</h3> <br /> <h6>{store.eye_color}</h6>
 				</div>
 				<div className="info">
 					<h3>Gender</h3> <br /> <h6> props gender</h6>
@@ -64,5 +66,5 @@ export const Sinchar = () => {
 };
 
 Sinchar.propTypes = {
-	
+	eye_color: propTypes.string,
 };
