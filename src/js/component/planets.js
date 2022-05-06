@@ -26,8 +26,8 @@ export const Planets = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
             
-                <p className="card-text">Population: {props.descriptionFour}</p>
-                <p className="card-text">Terrain: {props.descriptionFive}</p>
+                <p className="card-text">Population: {props.population}</p>
+                <p className="card-text">Terrain: {props.terrain}</p>
         
 
 
@@ -59,7 +59,6 @@ export const Planets = (props) => {
 
 Planets.propTypes = {
     name: PropTypes.string,
-    descriptionOne: PropTypes.string,
-    descriptionFour: PropTypes.string,
-    descriptionFive: PropTypes.string,
+    population:  PropTypes.string,
+    terrain:  PropTypes.string,
 }

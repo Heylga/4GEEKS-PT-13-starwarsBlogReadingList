@@ -25,8 +25,8 @@ export const Starships = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 
-                <p className="card-text">Model: {props.descriptionSix}</p>
-                <p className="card-text">Manufacturer: {props.descriptionSeven}</p>
+                <p className="card-text">Model: {props.model}</p>
+                <p className="card-text">Manufacturer: {props.manufacturer}</p>
 
 
                 <div className="d-flex justify-content-between">
@@ -57,7 +57,7 @@ export const Starships = (props) => {
 
 Starships.propTypes = {
     name: PropTypes.string,
-    descriptionOne: PropTypes.string,
-    descriptionSix: PropTypes.string,
-    descriptionSeven: PropTypes.string,
+    model: PropTypes.string,
+    manufacturer: PropTypes.string,
+
 }

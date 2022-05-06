@@ -49,13 +49,13 @@ export const Home = () => {
 				<div className="Planets">
 					<h2>Planets</h2>
 					<div className="container-cards">
-						{store.planets.map((character, index) => {
+						{store.planets.map((planet, index) => {
 							return (
 								<Planets
 									key={index}
-									name={character.name}
-									descriptionTwo={character.population}
-									descriptionThree={character.terrain}
+									name={planet.name}
+									population={planet.population}
+									terrain={planet.terrain}
 									id={index}
 									section="planets"
 								/>
@@ -67,13 +67,13 @@ export const Home = () => {
 				<div className="Starships">
 					<h2>Starships</h2>
 					<div className="container-cards">
-						{store.starships.map((starships, index) => {
+						{store.starships.map((starship, index) => {
 							return (
 								<Starships
 									key={index}
-									name={starships.name}
-									descriptionTwo={starships.model}
-									descriptionThree={starships.manufacturer}
+									name={starship.name}
+									model={starship.model}
+									manufacturer={starship.manufacturer}
 									id={index}
 									section="starships"
 								/>
