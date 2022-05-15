@@ -9,15 +9,19 @@ export const Planets = (props) => {
     const {store, actions} = useContext(Context);
     const [favourite, setFavourite]= useState ({});
 
+
     
     return (
         <div className="container-card">
             <div className="card">
 
             <img
+                        // src={
+                        //   "https://starwars-visualguide.com/#/planets?page=1" + ".jpg"
+                        // }
                         src={
-                          "https://starwars-visualguide.com/#/planets?page=1" + ".jpg"
-                        }
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Planets"
                       />
@@ -29,15 +33,12 @@ export const Planets = (props) => {
                 <p className="card-text">Population: {props.population}</p>
                 <p className="card-text">Terrain: {props.terrain}</p>
         
-
-
                 <div className="d-flex justify-content-between">
-                    <Link to="/sinplan">
+                    <Link to={"/sinplan/" + props.name}>
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>
 					</Link>
-
 
                 <button
                     id="heart"

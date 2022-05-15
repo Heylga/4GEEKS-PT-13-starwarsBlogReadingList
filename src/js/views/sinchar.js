@@ -1,27 +1,28 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import propTypes from "prop-types";
 
 
-export const Sinchar = () => { 
+export const Sinchar = (props) => { 
 	const { store, actions } = useContext(Context);
-
-
     return (
 		<div className="container">
 
 			<div className="d-flex">
 			<img
+                        // src={
+                        //   "https://starwars-visualguide.com/#/characters?page=1" + ".jpg"
+                        // }
                         src={
-                          "https://starwars-visualguide.com/#/characters?page=1" + ".jpg"
-                        }
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Character"
                       />
 				<div>
-					<h1 className="singleTitle">Props Name</h1>
+					<h1 className="singleTitle">Name: {store.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
 					Integer elementum porttitor enim. Maecenas suscipit metus a sem iaculis, in posuere ex hendrerit. 
@@ -37,19 +38,19 @@ export const Sinchar = () => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Birth Year</h3> <br /> <h6>props birth year</h6>
+					<h3>Birth Year</h3> <br /> <h6>{store.birth_year}</h6>
 				</div>
 				<div className="info">
 					<h3>Eye Color</h3> <br /> <h6>{store.eye_color}</h6>
 				</div>
 				<div className="info">
-					<h3>Gender</h3> <br /> <h6> props gender</h6>
+					<h3>Gender</h3> <br /> <h6> {store.gender}</h6>
 				</div>
 				<div className="info">
-					<h3>Hair Color</h3> <br /> <h6>props hair color</h6>
+					<h3>Hair Color</h3> <br /> <h6>{store.hair_color}</h6>
 				</div>
 				<div className="info">
-					<h3>Height</h3> <br /> <h6>props height</h6>
+					<h3>Height</h3> <br /> <h6>{store.height}</h6>
 				</div>
 			</div>
 			<br />
@@ -66,5 +67,10 @@ export const Sinchar = () => {
 };
 
 Sinchar.propTypes = {
+	name: propTypes.string,
 	eye_color: propTypes.string,
+	height: propTypes.string,
+	hair_color: propTypes.string,
+	birth_year:  propTypes.string,
+	gender:  propTypes.string,
 };

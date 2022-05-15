@@ -16,9 +16,12 @@ export const People = (props) => {
         <div className="container-card">
             <div className="card">
             <img
+                        // src={
+                        //   "https://starwars-visualguide.com/assets/img/characters/" + props.id + ".jpg"
+                        // }
                         src={
-                          "https://starwars-visualguide.com/assets/img/characters/" + props.id + ".jpg"
-                        }
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Character"
                       />

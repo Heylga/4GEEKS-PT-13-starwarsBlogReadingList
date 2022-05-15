@@ -53,7 +53,4 @@ Card.propTypes = {
     descriptionThree: PropTypes.string,
     descriptionFour: PropTypes.string,
     descriptionFive: PropTypes.string,
-
-    
-
 }

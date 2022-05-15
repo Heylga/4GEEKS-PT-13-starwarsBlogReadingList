@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link, useParams } from "react-router-dom";
 
-
-export const Sinstar = () => { 
+export const Sinstar = (props) => { 
 	const { store, actions } = useContext(Context);
     const params = useParams();
 
@@ -13,14 +13,17 @@ export const Sinstar = () => {
 
 			<div className="d-flex">
 			<img
-                        src={
-                          "https://starwars-visualguide.com/#/starships?page=1" + ".jpg"
-                        }
+                        // src={
+                        //   "https://starwars-visualguide.com/#/starships?page=1" + ".jpg"
+                        // }
+						src={
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Starships"
                       />
 				<div>
-				<h1 className="singleTitle">props name</h1>
+				<h1 className="singleTitle">Starship  {props.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
@@ -37,22 +40,19 @@ export const Sinstar = () => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Model</h3> <br /> <h6>props Model</h6>
+					<h3>Model</h3> <br /> <h6> {props.model}</h6>
 				</div>
 				<div className="info">
-					<h3>Vehicle Class</h3> <br /> <h6>vehicle class</h6>
+					<h3>Vehicle Class</h3> <br /> <h6> {props.vehicle_class}</h6>
 				</div>
 				<div className="info">
-					<h3>Cost in credits</h3> <br /> <h6>props vehicle class</h6>
+					<h3>Cost in  credits</h3> <br /> <h6> {props.cost_in_credits} </h6>
 				</div>
 				<div className="info">
-					<h3>Cost in  credits</h3> <br /> <h6>props cost in credits</h6>
+					<h3>Passengers</h3> <br /> <h6> {props.passengers} </h6>
 				</div>
 				<div className="info">
-					<h3>Passengers</h3> <br /> <h6>props passengers</h6>
-				</div>
-				<div className="info">
-					<h3>Cargo Capacity</h3> <br /> <h6>props cargo capacity</h6>
+					<h3>Cargo Capacity</h3> <br /> <h6> {props.cargo_capacity}  </h6>
 				</div>
 			</div>
 			<br />
@@ -70,5 +70,11 @@ export const Sinstar = () => {
 };
 
 Sinstar.propTypes = {
-	location: PropTypes.object
+	name: PropTypes.string,
+	location: PropTypes.object,
+	model: PropTypes.string,
+	vehicle_class: PropTypes.string,
+	cost_in_credits: PropTypes.string,
+	passengers: PropTypes.string,
+	cargo_capacity: PropTypes.string,
 };

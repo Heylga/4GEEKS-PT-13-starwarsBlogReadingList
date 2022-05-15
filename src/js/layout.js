@@ -31,10 +31,10 @@ const Layout = () => {
 						<Route exact path="/sinchar/:name">
 							<Sinchar />
 						</Route>
-						<Route exact path="/sinplan">
+						<Route exact path="/sinplan/:name">
 							<Sinplan />
 						</Route>
-						<Route exact path="/sinstar">
+						<Route exact path="/sinstar/:name">
 							<Sinstar />
 						</Route>
 						<Route>

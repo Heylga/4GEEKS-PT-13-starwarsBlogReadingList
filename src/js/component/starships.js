@@ -9,15 +9,19 @@ export const Starships = (props) => {
     const {store, actions} = useContext(Context);
     const [favourite, setFavourite]= useState ({});
 
+
     
     return (
         <div className="container-card">
             <div className="card">
 
             <img
+                        // src={
+                        //   "https://starwars-visualguide.com/#/starships?page=1" + ".jpg"
+                        // }
                         src={
-                          "https://starwars-visualguide.com/#/starships?page=1" + ".jpg"
-                        }
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Starships"
                       />
@@ -30,12 +34,12 @@ export const Starships = (props) => {
 
 
                 <div className="d-flex justify-content-between">
-                    <Link to="/sinstar">
+
+                    <Link to={"/sinstar/" + props.name}>
 						<button href="#" className="btn btn-outline-primary">
 							Learn More!
 						</button>
 					</Link>
-
                 <button
                     id="heart"
                     className="btn"

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link, useParams } from "react-router-dom";
 
 
-export const Sinplan = () => { 
+export const Sinplan = (props) => { 
 	const { store, actions } = useContext(Context);
     const params = useParams();
 
@@ -12,15 +13,18 @@ export const Sinplan = () => {
 
 			<div className="d-flex">
             <img
-                        src={
-                          "https://starwars-visualguide.com/#/planets?page=1" + ".jpg"
-                        }
+                        // src={
+                        //   "https://starwars-visualguide.com/#/planets?page=1" + ".jpg"
+                        // }
+						src={
+							"https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"
+						  }
                         className="card-img-top"
                         alt="Star Wars Planets"
                       />
 
 				<div>
-					<h1 className="singleTitle">props name</h1>
+					<h1 className="singleTitle">Planet {props.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
@@ -37,16 +41,16 @@ export const Sinplan = () => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Population</h3> <br /> <h6>props Population</h6>
+					<h3>Population</h3> <br /> <h6>  {props.population}</h6>
 				</div>
 				<div className="info">
-					<h3>Diameter</h3> <br /> <h6>props Diameter</h6>
+					<h3>Diameter</h3> <br /> <h6>  {props.diameter}</h6>
 				</div>
 				<div className="info">
-					<h3>Terrain</h3> <br /> <h6>props Terrain</h6>
+					<h3>Terrain</h3> <br /> <h6>  {props.terrain}</h6>
 				</div>
 				<div className="info">
-					<h3>Orbital Period</h3> <br /> <h6>props Orbital Period</h6>
+					<h3>Orbital Period</h3> <br /> <h6>  {props.orbital_period}</h6>
 				</div>
 			</div>
 			<br />
@@ -64,5 +68,9 @@ export const Sinplan = () => {
 };
 
 Sinplan.propTypes = {
-	
+	name: PropTypes.string,
+	population:  PropTypes.string,
+    terrain: PropTypes.string,
+	orbital_period: PropTypes.string,
+	diameter: PropTypes.string,
 };
