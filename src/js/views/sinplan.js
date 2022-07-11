@@ -24,7 +24,7 @@ export const Sinplan = (props) => {
                       />
 
 				<div>
-					<h1 className="singleTitle">Planet {props.name}</h1>
+					<h1 className="singleTitle">Planet Lorem ipsum  {props.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
@@ -41,16 +41,16 @@ export const Sinplan = (props) => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Population</h3> <br /> <h6>  {props.population}</h6>
+					<h3>Population</h3> <br /> <h6>  Lorem ipsum  {props.population}</h6>
 				</div>
 				<div className="info">
-					<h3>Diameter</h3> <br /> <h6>  {props.diameter}</h6>
+					<h3>Diameter</h3> <br /> <h6> Lorem ipsum  {props.diameter}</h6>
 				</div>
 				<div className="info">
-					<h3>Terrain</h3> <br /> <h6>  {props.terrain}</h6>
+					<h3>Terrain</h3> <br /> <h6> Lorem ipsum  {props.terrain}</h6>
 				</div>
 				<div className="info">
-					<h3>Orbital Period</h3> <br /> <h6>  {props.orbital_period}</h6>
+					<h3>Orbital Period</h3> <br /> <h6> Lorem ipsum  {props.orbital_period}</h6>
 				</div>
 			</div>
 			<br />

@@ -9,7 +9,7 @@ export const Card = (props) => {
     const {store, actions} = useContext(Context);
     const [favourite, setFavourite]= useState ({});
 
-    
+
     return (
         <div className="container-card">
             <div className="card">
@@ -34,6 +34,9 @@ export const Card = (props) => {
                     className="btn"
                     onClick={() => {
                         actions.addFavorite(props.name);
+                    }}
+                    onDoubleClick={() => {
+                        actions.deleteFavorite(props.name);
                     }}
                 >
                 <a href="#" className="btn btn-primary">❤️</a>

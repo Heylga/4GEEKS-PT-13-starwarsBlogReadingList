@@ -22,7 +22,7 @@ export const Sinchar = (props) => {
                         alt="Star Wars Character"
                       />
 				<div>
-					<h1 className="singleTitle">Name: {store.name}</h1>
+					<h1 className="singleTitle">Name: Lorem ipsum  {store.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
 					Integer elementum porttitor enim. Maecenas suscipit metus a sem iaculis, in posuere ex hendrerit. 
@@ -38,19 +38,19 @@ export const Sinchar = (props) => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Birth Year</h3> <br /> <h6>{store.birth_year}</h6>
+					<h3>Birth Year</h3> <br /> <h6> Lorem ipsum {store.birth_year}</h6>
 				</div>
 				<div className="info">
-					<h3>Eye Color</h3> <br /> <h6>{store.eye_color}</h6>
+					<h3>Eye Color</h3> <br /> <h6> Lorem ipsum {store.eye_color}</h6>
 				</div>
 				<div className="info">
-					<h3>Gender</h3> <br /> <h6> {store.gender}</h6>
+					<h3>Gender</h3> <br /> <h6> Lorem ipsum  {store.gender}</h6>
 				</div>
 				<div className="info">
-					<h3>Hair Color</h3> <br /> <h6>{store.hair_color}</h6>
+					<h3>Hair Color</h3> <br /> <h6> Lorem ipsum {store.hair_color}</h6>
 				</div>
 				<div className="info">
-					<h3>Height</h3> <br /> <h6>{store.height}</h6>
+					<h3>Height</h3> <br /> <h6> Lorem ipsum {store.height}</h6>
 				</div>
 			</div>
 			<br />

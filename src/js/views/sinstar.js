@@ -23,7 +23,7 @@ export const Sinstar = (props) => {
                         alt="Star Wars Starships"
                       />
 				<div>
-				<h1 className="singleTitle">Starship  {props.name}</h1>
+				<h1 className="singleTitle">Starship Lorem ipsum  {props.name}</h1>
 					<h4 className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Nam eget quam a nulla malesuada tincidunt sit amet eget eros. 
@@ -40,19 +40,19 @@ export const Sinstar = (props) => {
 			<hr className="breakline" />
 			<div className="d-flex  justify-content-between">
 				<div className="info">
-					<h3>Model</h3> <br /> <h6> {props.model}</h6>
+					<h3>Model</h3> <br /> <h6> Lorem ipsum {props.model}</h6>
 				</div>
 				<div className="info">
-					<h3>Vehicle Class</h3> <br /> <h6> {props.vehicle_class}</h6>
+					<h3>Vehicle Class</h3> <br /> <h6> Lorem ipsum {props.vehicle_class}</h6>
 				</div>
 				<div className="info">
-					<h3>Cost in  credits</h3> <br /> <h6> {props.cost_in_credits} </h6>
+					<h3>Cost in  credits</h3> <br /> <h6> Lorem ipsum  {props.cost_in_credits} </h6>
 				</div>
 				<div className="info">
-					<h3>Passengers</h3> <br /> <h6> {props.passengers} </h6>
+					<h3>Passengers</h3> <br /> <h6> Lorem ipsum  {props.passengers} </h6>
 				</div>
 				<div className="info">
-					<h3>Cargo Capacity</h3> <br /> <h6> {props.cargo_capacity}  </h6>
+					<h3>Cargo Capacity</h3> <br /> <h6> Lorem ipsum  {props.cargo_capacity}  </h6>
 				</div>
 			</div>
 			<br />
